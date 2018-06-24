@@ -1,4 +1,4 @@
-#Skip API
+# Skip API
 
 
 ## User Stories
@@ -9,6 +9,7 @@ A restaurant have clients that want listen to music during the lunch/dinner, the
 
 The API provides a connection to the Spotify API, in order to return the track names, a Spotify App was created in order to search the songs names. 
 Also was created a Mysql database, that store the playlist selected by the customers, for this scenario also is available an endpoint to do create a playlist.
+The Project runs on java 8,  using Spark Framework and intentionally runs on AWS RDS (MySQL) and AWS ECS. 
 
 
 ## Curl usage 
@@ -46,4 +47,11 @@ This endpoint is responsible to remove the oldest track in the playlist, that's 
     curl -H "Content-Type: application/json" -X GET http://localhost:8080/removeSong
     
     "success"
+    
+## Architecture
+
+The image below explains the architecture of this project, the API shall run in an AWS instance, that connect in an AWS RDS instance.
+The web app, in which will display the data, connect directly in the API.
+
+![alt text](https://github.com/guilhermemalfatti/skip-api/blob/feat/readme/img/design.png)
 
