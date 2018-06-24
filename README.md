@@ -53,3 +53,5 @@ This endpoint is responsible to remove the oldest track in the playlist, that's 
 The image below explains the architecture of this project, the API shall run in an AWS instance, that connect in an AWS RDS instance.
 The web app, in which will display the data, connect directly in the API.
 
+![alt text](https://github.com/guilhermemalfatti/skip-api/blob/feat/readme/img/design.png)
+
